@@ -1,0 +1,15 @@
+# Ignore data files
+*.csv
+*.xlsx
+*.xls
+
+# Ignore model and label encoder files
+trained_model.json
+label_encoder.pkl
+*.pkl
+*.npy
+
+# Ignore notebook and plot files (optional)
+*.ipynb
+*.png
+*.jpg
