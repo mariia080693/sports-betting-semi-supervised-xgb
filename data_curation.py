@@ -164,10 +164,10 @@ print("-" * 50)
 # Compare labeled vs unlabeled data distributions
 has_label = df["SurveyAnswer"].notna()
 
-plt.hist(df['DaysReg'], bins=50, alpha=0.7, label='All Data', color='green', edgecolor='black')
-plt.hist(df[has_label]['DaysReg'], bins=50, alpha=0.7, label='Labeled Data', color='yellow', edgecolor='black')
+plt.hist(df[has_label]['DaysReg'], bins=50, alpha=0.7, label='Labeled Data', color='green', density=True)
+plt.hist(df['DaysReg'], bins=50, label='All Data', facecolor='none', edgecolor='black', density=True)
 plt.xlabel('Days')
-plt.ylabel('Number of Users')
+plt.ylabel('Number of Users (normalized)')
 plt.title('Days between Registration and Registration_max: All Data vs Labeled Data')
 plt.legend()
 plt.grid(True, alpha=0.3)
